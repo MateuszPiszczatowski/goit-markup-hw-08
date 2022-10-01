@@ -1,0 +1,16 @@
+.logo {
+  font-family: getFont("secondary");
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.385;
+  color: getColor("logo-secondary");
+  margin-right: 93px;
+  &:visited {
+    color: getColor("logo-secondary");
+  }
+}
+
+.logo__first-word {
+  color: getColor("company");
+}

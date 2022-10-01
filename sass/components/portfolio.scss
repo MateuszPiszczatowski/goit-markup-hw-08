@@ -1,0 +1,73 @@
+.filter-buttons {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-buttons__list-item {
+  margin: 0 8px 0 0;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.projects__project {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  margin: 30px 0 0;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px #0000001f, 0px 4px 4px #0000000f, 1px 4px 6px #00000029;
+    cursor: pointer;
+    .projects__long-description {
+      transform: translateY(0px);
+    }
+  }
+  &:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+}
+
+.projects__caption {
+  padding: 20px 24px;
+  border-right: 1px solid getColor("project-border");
+  border-left: 1px solid getColor("project-border");
+  border-bottom: 1px solid getColor("project-border");
+}
+
+.projects__name {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.projects__short-description {
+  line-height: 1.88;
+  color: getColor("text-secondary");
+}
+
+.projects__long-description-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.projects__long-description {
+  width: 370px;
+  height: 294px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  background: getColor("company");
+  padding: 49px 45px 49px 24px;
+  transition: transform 250ms linear;
+  transform: translateY(101%);
+  opacity: 0.95;
+  color: getColor("text-tertiary");
+}

@@ -1,0 +1,113 @@
+.section--purchase {
+  padding: 200px 0 200px;
+  background-image: url("..\\images\\agency\\background-image-creative-team.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.heading-one {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  margin-bottom: 30px;
+  color: getColor("text-tertiary");
+}
+
+.feature__icon-container {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  background-color: getColor("background-secondary");
+}
+
+.feature__icon {
+  height: 70px;
+}
+
+.feature__heading-three {
+  margin-bottom: 10px;
+}
+
+.feature__description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: getColor("text-secondary");
+}
+
+.field-card {
+  margin: 0;
+  position: relative;
+  height: 294px;
+}
+
+.field-image {
+  display: block;
+}
+
+.field-card__heading-three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2f303acc;
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  color: getColor("text-tertiary");
+}
+
+.employee {
+  margin: 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: getColor("background-base");
+}
+
+.employee__caption {
+  padding: 30px 0 30px 0;
+}
+
+.employee__name {
+  font-weight: 500;
+  line-height: 1.1875;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.employee__position {
+  line-height: 1.1875;
+  text-align: center;
+  color: getColor("text-secondary");
+}
+
+.employee__social-media {
+  margin-top: 16px;
+  fill: getColor("icon-primary");
+}
+
+.client {
+  width: 170px;
+  height: 92px;
+  border: 1px solid getColor("icon-primary");
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: getColor("icon-primary");
+  &:hover,
+  &:focus {
+    border-color: getColor("company");
+    fill: getColor("company");
+    cursor: pointer;
+  }
+}
+
+.client__icon {
+  width: 106px;
+  height: 60px;
+}

@@ -1,0 +1,30 @@
+$colors: (
+  company: #2196f3,
+  text-primary: #212121,
+  text-secondary: #757575,
+  text-tertiary: #fff,
+  logo-secondary: #000,
+  footer: #ffffff99,
+  terms-link: #af970c,
+  background-base: #fff,
+  background-primary: #2f303a,
+  background-secondary: #f5f4fa,
+  icon-primary: #afb1b8,
+  icon-secondary: #fff,
+  icon-background: #ffffff1a,
+  header-border: #ececec,
+  project-border: #eeeeee,
+);
+
+$fonts: (
+  primary: "Roboto",
+  secondary: "Raleway",
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
+
+@function getFont($font) {
+  @return map-get($fonts, $font);
+}
