@@ -14,9 +14,6 @@
   color: getColor("company");
 }
 
-@media all and (min-width: getThreshold("tablet")) {
-}
-
 @media all and (min-width: getThreshold("desktop")) {
   .logo {
     font-size: 26px;

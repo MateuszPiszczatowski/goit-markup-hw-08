@@ -19,7 +19,7 @@
 }
 
 .feature {
-  width: 300px;
+  width: 290px;
 }
 
 .feature__icon-container {
@@ -50,29 +50,6 @@
   display: none;
 }
 
-.field-card {
-  margin: 0;
-  position: relative;
-}
-
-.field-image {
-  display: block;
-  height: 294px;
-  width: 370px;
-}
-
-.field-card__heading-three {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #2f303acc;
-  width: 370px;
-  height: 70px;
-  position: absolute;
-  bottom: 0;
-  color: getColor("text-tertiary");
-}
-
 .employee__figure {
   margin: 0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -82,7 +59,7 @@
 }
 
 .employee__image {
-  width: 300px;
+  width: 290px;
   height: 307px;
 }
 
@@ -142,16 +119,9 @@
   }
 }
 
-@media all and (max-width: (getThreshold("mobile") - 1)) {
-  .employee__figure {
-    width: 300px;
-  }
-}
-
 @media all and (min-width: getThreshold("mobile")) {
   .heading-one {
     font-size: 26px;
-    line-height: 1.62;
   }
   .feature {
     width: 450px;
@@ -175,7 +145,7 @@
   .employee:not(:last-child) {
     margin-bottom: 30px;
   }
-  .client:nth-child(-n + 4) {
+  .client:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
   }
 }
@@ -187,9 +157,6 @@
   }
   .feature {
     width: 354px;
-  }
-  .feature__icon-container {
-    height: 120px;
   }
   .client {
     width: 226px;
@@ -228,6 +195,7 @@
 @media all and (min-width: getThreshold("desktop")) {
   .section--purchase {
     height: 600px;
+    background-image: url("..\\images\\agency\\background-image-creative-team-1600.jpg");
   }
   .feature {
     width: 270px;
@@ -242,9 +210,30 @@
   .client {
     width: 170px;
   }
-  .section--purchase {
-    background-image: url("..\\images\\agency\\background-image-creative-team-1600.jpg");
+
+  .field-card {
+    margin: 0;
+    position: relative;
   }
+
+  .field-image {
+    display: block;
+    height: 294px;
+    width: 370px;
+  }
+
+  .field-card__heading-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2f303acc;
+    width: 370px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    color: getColor("text-tertiary");
+  }
+
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

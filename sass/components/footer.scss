@@ -4,7 +4,7 @@
   background-color: getColor("background-primary");
 }
 
-.footer-container {
+.footer__container {
   align-items: baseline;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .newsletter__input {
-  width: 300px;
+  width: 290px;
   height: 50px;
   background-color: getColor("background-primary");
   border: 1px solid #ffffff4d;
@@ -55,48 +55,30 @@
 }
 
 @media all and (min-width: getThreshold("mobile")) {
-  .footer {
-    min-width: getThreshold("mobile");
-  }
   .newsletter__input {
     width: 450px;
   }
 }
 
-@media all and (max-width: (getThreshold("tablet")-1px)) {
-  .footer__address {
-    margin-bottom: 60px;
-  }
-  .footer__social-media {
-    margin-bottom: 60px;
-  }
-  .newsletter__input {
-    margin-bottom: 20px;
-  }
-}
-
 @media all and (min-width: getThreshold("tablet")) {
-  .footer {
-    min-width: getThreshold("tablet");
-  }
-  .footer-container {
+  .footer__container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
   }
 }
 
 @media all and (min-width: getThreshold("tablet")) and (max-width: (getThreshold("desktop") - 1px)) {
-  .footer__box {
-    &:first-child {
-      margin-bottom: 60px;
-    }
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 
 @media all and (max-width: (getThreshold("desktop") - 1px)) {
   .footer__box {
     align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
   .newsletter__input {
     margin-bottom: 20px;
@@ -104,13 +86,8 @@
 }
 
 @media all and (min-width: getThreshold("desktop")) {
-  .footer {
-    min-width: getThreshold("desktop");
-  }
-  .footer__box {
-    & + & {
-      margin-left: 70px;
-    }
+  .footer__container {
+    justify-content: space-between;
   }
   .newsletter {
     flex-direction: row;

@@ -84,7 +84,7 @@
   color: getColor("company");
 }
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 480px) and (max-width: (getThreshold("tablet")-1px)) {
   .mobile-menu__navigation {
     font-size: 40px;
   }

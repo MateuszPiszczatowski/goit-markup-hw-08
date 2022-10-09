@@ -19,12 +19,12 @@
 }
 
 .modal {
-  width: 300px;
-  height: 609px;
+  width: 290px;
+  height: 480px;
   background-color: getColor("background-base");
   border-radius: 4px;
   position: relative;
-  padding: 40px;
+  padding: 8px;
 }
 
 .exit-button {
@@ -49,8 +49,8 @@
 }
 
 .purchase-form__heading {
-  margin-bottom: 12px;
-  font-size: 20px;
+  margin-bottom: 2px;
+  font-size: 18px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
@@ -67,7 +67,7 @@
 
 .purchase-form__label {
   & + & {
-    margin-top: 10px;
+    margin-top: 5px;
     display: block;
   }
 }
@@ -92,14 +92,14 @@
 }
 
 .purchase-form__input-box {
-  margin-top: 4px;
+  margin-top: 2px;
   width: 100%;
 }
 
 .purchase-form__icon {
   width: 18px;
   height: 18px;
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .textarea {
@@ -114,7 +114,7 @@
 
 .purchase-form__textarea {
   width: 100%;
-  margin-top: 4px;
+  margin-top: 2px;
   display: block;
 }
 
@@ -125,8 +125,8 @@
 }
 
 .purchase-form__terms-label {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 8px;
+  margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -146,7 +146,7 @@
 }
 
 .purchase-form__checkbox-icon {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .check-icon,
@@ -176,13 +176,43 @@
   justify-content: center;
 }
 
+@media all and (min-width: getThreshold("mobile")), (min-height: 610px) {
+  .modal {
+    height: 609px;
+    padding: 40px;
+  }
+  .purchase-form__heading {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .purchase-form__label {
+    & + & {
+      margin-top: 10px;
+    }
+  }
+  .purchase-form__input-box {
+    margin-top: 4px;
+  }
+  .purchase-form__icon {
+    margin-right: 12px;
+  }
+  .purchase-form__textarea {
+    width: 100%;
+    margin-top: 4px;
+  }
+  .purchase-form__terms-label {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .purchase-form__checkbox-icon {
+    margin-right: 8px;
+  }
+}
+
 @media all and (min-width: getThreshold("mobile")) {
   .modal {
     width: 450px;
   }
-}
-
-@media all and (min-width: getThreshold("tablet")) {
 }
 
 @media all and (min-width: getThreshold("desktop")) {
