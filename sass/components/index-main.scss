@@ -138,6 +138,7 @@
   (min-resolution: 2dppx) {
   .section--purchase {
     background-image: url("..\\images\\agency\\background-image-creative-team-960.jpg");
+    background-size: 480px 400px;
   }
 }
 
@@ -203,6 +204,7 @@
     (min-resolution: 2dppx) {
     .section--purchase {
       background-image: url("..\\images\\agency\\background-image-creative-team-1536.jpg");
+      background-size: 768px 400px;
     }
   }
 }
@@ -249,6 +251,7 @@
     (min-resolution: 2dppx) {
     .section--purchase {
       background-image: url("..\\images\\agency\\background-image-creative-team-3200.jpg");
+      background-size: 1600px 600px;
     }
   }
 }
