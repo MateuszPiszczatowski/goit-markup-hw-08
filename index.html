@@ -19,8 +19,10 @@
     <header class="header">
       <div class="container header__container">
         <div class="navigation">
-          <a href="index.html" class="logo"><span class="logo__first-word">Web</span>Studio</a>
-          <nav>
+          <a href="index.html" class="logo header__logo">
+            <span class="logo__first-word">Web</span>Studio
+          </a>
+          <nav class="navigation__links">
             <a href="index.html" class="link navigation__link--active navigation__link">
               Agencja
             </a>
@@ -42,6 +44,11 @@
             +48 111 111 111
           </a>
         </div>
+        <button type="button" class="header__mobile-navigation-button js-open-menu">
+          <svg width="40px" height="40px">
+            <use href=".//images//icons.svg#mobile-menu-icon" />
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -54,7 +61,7 @@
           <button type="button" class="button" data-modal-open>Zamów usługę</button>
         </div>
       </section>
-      <section class="section section--no-padding-bottom">
+      <section class="section section--features-padding-bottom">
         <div class="container">
           <ul class="list">
             <li class="feature">
@@ -69,7 +76,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="feature">
               <div class="feature__icon-container">
                 <svg class="feature__icon">
                   <use href=".//images//icons.svg#icon-clock" />
@@ -81,7 +88,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="feature">
               <div class="feature__icon-container">
                 <svg class="feature__icon">
                   <use href=".//images//icons.svg#icon-diagram" />
@@ -93,7 +100,7 @@
                 sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="feature">
               <div class="feature__icon-container">
                 <svg class="feature__icon">
                   <use href=".//images//icons.svg#icon-astronaut" />
@@ -108,7 +115,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section class="section section--fields">
         <div class="container">
           <h2 class="heading-two section__heading-two">Czym się zajmujemy</h2>
           <ul class="list">
@@ -121,8 +128,10 @@
                   class="field-image"
                   src="images/agency/coding-on-laptop.jpg"
                   alt="Zdjęcie osoby programującej na laptopie"
-                  width="370"
-                  height="294" />
+                  srcset="
+                    images/agency/coding-on-laptop-370.jpg 370w,
+                    images/agency/coding-on-laptop-740.jpg 740w
+                  " />
               </figure>
             </li>
             <li>
@@ -134,8 +143,10 @@
                   class="field-image"
                   src="images/agency/mobile-design.jpg"
                   alt="Zdjęcie osoby projektującej interfejs aplikacji mobilnej"
-                  width="370"
-                  height="294" />
+                  srcset="
+                    images/agency/mobile-design-370.jpg 370w,
+                    images/agency/mobile-design-740.jpg 740w
+                  " />
               </figure>
             </li>
             <li>
@@ -147,8 +158,10 @@
                   class="field-image"
                   src="images/agency/color-grid-on-tablet.jpg"
                   alt="Zdjęcie osoby korzystającej z palety kolorów"
-                  width="370"
-                  height="294" />
+                  srcset="
+                    images/agency/color-grid-on-tablet-370.jpg 370w,
+                    images/agency/color-grid-on-tablet-740.jpg 740w
+                  " />
               </figure>
             </li>
           </ul>
@@ -158,13 +171,20 @@
         <div class="container">
           <h2 class="heading-two section__heading-two">Nasz zespół</h2>
           <ul class="list">
-            <li>
-              <figure class="employee">
+            <li class="employee">
+              <figure class="employee__figure">
                 <img
                   src="images/agency/first-john-doe.jpg"
                   alt="Zdjęcie Johna Doe, Product Designera"
-                  width="270"
-                  height="260" />
+                  class="employee__image"
+                  srcset="
+                    images/agency/first-john-doe-270.jpg 270w,
+                    images/agency/first-john-doe-354.jpg 354w,
+                    images/agency/first-john-doe-450.jpg 450w,
+                    images/agency/first-john-doe-540.jpg 540w,
+                    images/agency/first-john-doe-708.jpg 708w,
+                    images/agency/first-john-doe-900.jpg 900w
+                  " />
                 <figcaption class="employee__caption">
                   <h3 class="employee__name">John Doe</h3>
                   <p class="employee__position">Product Designer</p>
@@ -201,13 +221,20 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="list__item">
-              <figure class="employee">
+            <li class="employee">
+              <figure class="employee__figure">
                 <img
                   src="images/agency/second-john-doe.jpg"
                   alt="Zdjęcie Johna Doe, Frontend Developera"
-                  width="270"
-                  height="260" />
+                  class="employee__image"
+                  srcset="
+                    images/agency/second-john-doe-270.jpg 270w,
+                    images/agency/second-john-doe-354.jpg 354w,
+                    images/agency/second-john-doe-450.jpg 450w,
+                    images/agency/second-john-doe-540.jpg 540w,
+                    images/agency/second-john-doe-708.jpg 708w,
+                    images/agency/second-john-doe-900.jpg 900w
+                  " />
                 <figcaption class="employee__caption">
                   <h3 class="employee__name">John Doe</h3>
                   <p class="employee__position">Frontend Developer</p>
@@ -244,13 +271,20 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="list__item">
-              <figure class="employee">
+            <li class="employee">
+              <figure class="employee__figure">
                 <img
                   src="images/agency/third-john-doe.jpg"
                   alt="Zdjęcie Johna Doe, Marketingowca"
-                  width="270"
-                  height="260" />
+                  class="employee__image"
+                  srcset="
+                    images/agency/third-john-doe-270.jpg 270w,
+                    images/agency/third-john-doe-354.jpg 354w,
+                    images/agency/third-john-doe-450.jpg 450w,
+                    images/agency/third-john-doe-540.jpg 540w,
+                    images/agency/third-john-doe-708.jpg 708w,
+                    images/agency/third-john-doe-900.jpg 900w
+                  " />
                 <figcaption class="employee__caption">
                   <h3 class="employee__name">John Doe</h3>
                   <p class="employee__position">Marketing</p>
@@ -287,13 +321,20 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="list__item">
-              <figure class="employee">
+            <li class="employee">
+              <figure class="employee__figure">
                 <img
                   src="images/agency/fourth-john-doe.jpg"
                   alt="Zdjęcie Johna Doe, UI Designera"
-                  width="270"
-                  height="260" />
+                  class="employee__image"
+                  srcset="
+                    images/agency/fourth-john-doe-270.jpg 270w,
+                    images/agency/fourth-john-doe-354.jpg 354w
+                    images/agency/fourth-john-doe-450.jpg 450w,
+                    images/agency/fourth-john-doe-540.jpg 540w,
+                    images/agency/fourth-john-doe-708.jpg 708w,
+                    images/agency/fourth-john-doe-900.jpg 900w
+                  " />
                 <figcaption class="employee__caption">
                   <h3 class="employee__name">John Doe</h3>
                   <p class="employee__position">UI Designer</p>
@@ -336,7 +377,7 @@
       <section class="section">
         <div class="container">
           <h2 class="heading-two section__heading-two">Nasi klienci</h2>
-          <ul class="icon-gray list">
+          <ul class="icon-gray list list--wrapped">
             <li class="client" tabindex="0">
               <svg class="client__icon">
                 <use href=".//images//icons.svg#icon-logo1" />
@@ -378,7 +419,7 @@
           <a href="index.html" class="logo footer__logo">
             <span class="logo__first-word">Web</span>Studio
           </a>
-          <address class="address">
+          <address class="address footer__address">
             <p>m. Warszawa, Aleje Jerozolimskie 21</p>
             <a href="mailto:info@devstudio.com" class="link address__link">info@devstudio.com</a>
             <a href="tel:+48111111111" class="link address__link">+48 111 111 111</a>
@@ -386,7 +427,7 @@
         </div>
         <div class="footer__box">
           <h3 class="footer__heading-three heading-three">Dołącz do nas</h3>
-          <ul class="list">
+          <ul class="social-media footer__social-media">
             <li class="social-media__item">
               <a
                 href="https://instagram.com/"
@@ -504,6 +545,42 @@
         </form>
       </div>
     </div>
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button type="button" class="mobile-menu__exit-button js-close-menu">
+        <svg class="mobile-menu__exit-icon">
+          <use href=".//images//icons.svg#mobile-menu__exit-icon" />
+        </svg>
+      </button>
+      <div class="mobile-menu__content">
+        <nav class="mobile-menu__navigation">
+          <a href="index.html" class="link mobile-menu__navigation-link"> Agencja </a>
+          <a href="portfolio.html" class="link mobile-menu__navigation-link">Portfolio</a>
+          <a class="link mobile-menu__navigation-link">Kontakt</a>
+        </nav>
+        <div class="mobile-menu__contacts">
+          <a href="tel:+48111111111" class="link mobile-menu__phone-number"> +48 111 111 111 </a>
+          <a href="mailto:info@devstudio.com" class="link mobile-menu__e-mail">
+            info@devstudio.com
+          </a>
+          <div class="mobile-menu__social-media">
+            <a href="https://instagram.com" class="link mobile-menu__social-media-link">
+              Instagram
+            </a>
+            |
+            <a href="https://twitter.com" class="link mobile-menu__social-media-link">Twitter</a> |
+            <a href="https://facebook.com" class="link mobile-menu__social-media-link">Facebook</a>
+            |
+            <a href="https://linkedin.com" class="link mobile-menu__social-media-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script> -->
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

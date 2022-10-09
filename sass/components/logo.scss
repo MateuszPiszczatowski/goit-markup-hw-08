@@ -2,10 +2,9 @@
   font-family: getFont("secondary");
   text-decoration: none;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.385;
+  font-size: 24px;
+  line-height: 1.17;
   color: getColor("logo-secondary");
-  margin-right: 93px;
   &:visited {
     color: getColor("logo-secondary");
   }
@@ -13,4 +12,14 @@
 
 .logo__first-word {
   color: getColor("company");
+}
+
+@media all and (min-width: getThreshold("tablet")) {
+}
+
+@media all and (min-width: getThreshold("desktop")) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.385;
+  }
 }

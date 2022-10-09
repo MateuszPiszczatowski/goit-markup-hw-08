@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0 25px;
+  padding: 16px 15px 16px;
 }
 
 .navigation {
@@ -45,21 +45,89 @@
 }
 
 .contact {
+  font-size: 12px;
+  line-height: 1.17;
   color: getColor("text-secondary");
 }
 
-.contact__number {
-  margin-left: 30px;
-}
-
 .contact__icon-envelope {
-  width: 16px;
-  height: 12px;
+  width: 14px;
+  height: 10px;
   fill: currentColor;
 }
 
 .contact__icon-smartphone {
   width: 10px;
-  height: 16px;
+  height: 14px;
   fill: currentColor;
+}
+
+.header__mobile-navigation-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background-color: getColor("background-base");
+  &:hover,
+  &:focus {
+    fill: getColor("company");
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: (getThreshold("tablet") - 1px)) {
+  .navigation__links {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+}
+
+@media all and (min-width: getThreshold("tablet")) {
+  .header__mobile-navigation-button {
+    display: none;
+  }
+}
+
+@media all and (min-width: getThreshold("tablet")) and (max-width: (getThreshold("desktop") - 1px)) {
+  .header__container {
+    padding: 21px 15px;
+  }
+  .contact__number {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .header__logo {
+    margin-right: 83px;
+  }
+}
+
+@media all and (min-width: getThreshold("desktop")) {
+  .header__container {
+    padding: 26px 15px;
+  }
+  .header__logo {
+    margin-right: 93px;
+  }
+
+  .contact {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  .contact__icon-envelope {
+    width: 16px;
+    height: 12px;
+  }
+
+  .contact__icon-smartphone {
+    width: 10px;
+    height: 16px;
+  }
+  .contact__number {
+    margin-left: 30px;
+  }
 }

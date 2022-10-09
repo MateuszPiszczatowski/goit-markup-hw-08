@@ -1,8 +1,9 @@
 .filter-buttons {
   display: flex;
   list-style: none;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 0;
 }
 
 .filter-buttons__list-item {
@@ -15,7 +16,6 @@
 .projects__project {
   display: flex;
   flex-direction: column;
-  margin: 0;
   position: relative;
   margin: 30px 0 0;
   &:hover,
@@ -26,9 +26,17 @@
       transform: translateY(0px);
     }
   }
-  &:nth-child(-n + 3) {
+  &:nth-child(1) {
     margin-top: 0;
   }
+}
+
+.projects__image {
+  width: 290px;
+  height: 294px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
 }
 
 .projects__caption {
@@ -58,7 +66,7 @@
 }
 
 .projects__long-description {
-  width: 370px;
+  width: 290px;
   height: 294px;
   font-weight: 400;
   font-size: 18px;
@@ -70,4 +78,99 @@
   transform: translateY(101%);
   opacity: 0.95;
   color: getColor("text-tertiary");
+}
+
+@media all and (max-width: (getThreshold("mobile") - 1px)) {
+  .filter-buttons__list-item {
+    &:nth-child(1),
+    &:nth-child(4) {
+      width: 82px;
+    }
+    &:nth-child(2),
+    &:nth-child(5) {
+      width: 88px;
+    }
+    &:nth-child(3) {
+      width: 96px;
+    }
+  }
+}
+
+@media all and (min-width: getThreshold(mobile)) {
+  .projects__image {
+    width: 450px;
+    height: 294px;
+  }
+  .projects__long-description {
+    width: 450px;
+  }
+}
+
+@media all and (max-width: (getThreshold("tablet") - 1px)) {
+  .filter-buttons__list-item {
+    &:nth-child(-n + 3) {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+@media all and (min-width: getThreshold("tablet")) {
+  .filter-buttons {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .projects__project {
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
+  .projects__image {
+    width: 354px;
+    height: 294px;
+  }
+  .projects__long-description {
+    width: 354px;
+  }
+}
+
+@media all and (min-width: getThreshold(mobile)) and (max-width: (getThreshold("desktop") - 1px)) {
+  .filter-buttons__list-item {
+    &:nth-child(1),
+    &:nth-child(4) {
+      width: 103px;
+    }
+    &:nth-child(2),
+    &:nth-child(5) {
+      width: 130px;
+    }
+    &:nth-child(3) {
+      width: 145px;
+    }
+  }
+}
+
+@media all and (max-width: (getThreshold("desktop") - 1px)) {
+  .filter-buttons__button-secondary {
+    padding: 6px 0;
+    width: 100%;
+  }
+}
+
+@media all and (min-width: getThreshold("desktop")) {
+  .filter-buttons {
+    margin-bottom: 50px;
+  }
+  .projects__project {
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+  }
+  .projects__image {
+    width: 370px;
+    height: 294px;
+  }
+  .projects__long-description {
+    width: 370px;
+  }
 }

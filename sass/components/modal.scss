@@ -19,8 +19,8 @@
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 300px;
+  height: 609px;
   background-color: getColor("background-base");
   border-radius: 4px;
   position: relative;
@@ -128,10 +128,11 @@
   margin-top: 20px;
   margin-bottom: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.03em;
-  line-height: 1.71;
+  line-height: 1.67;
   color: getColor("text-secondary");
 }
 
@@ -173,4 +174,24 @@
 .purchase-form__button-container {
   display: flex;
   justify-content: center;
+}
+
+@media all and (min-width: getThreshold("mobile")) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media all and (min-width: getThreshold("tablet")) {
+}
+
+@media all and (min-width: getThreshold("desktop")) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .purchase-form__terms-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
